@@ -2,7 +2,6 @@ import wx
 from nltk.tokenize import RegexpTokenizer
 
 
-
 def combine_indexes(words_list_stemmed, files_list):
     index, freq_word = create_inverted_index(files_list)
 

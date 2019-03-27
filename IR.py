@@ -1,16 +1,10 @@
 import wx
-import os
-# import main
-
-import sys
-import nltk
-import glob
 from nltk.tokenize import RegexpTokenizer
-from nltk import PorterStemmer
+
 
 
 def combine_indexes(words_list_stemmed, files_list):
-    index, freq_word = create_inverse_index(files_list)
+    index, freq_word = create_inverted_index(files_list)
 
     sum_freq = 0
     index_list = []
@@ -53,7 +47,7 @@ def stemming(word):
     return word
 
 
-def create_inverse_index(files_list):
+def create_inverted_index(files_list):
     # creating a dictionary of words
     index = dict()
 
